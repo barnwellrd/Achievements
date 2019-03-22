@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{45B1E7A3-A9BE-4496-B528-F18F164BAFE4}</ProjectGuid>
+    <RootNamespace>Achievements</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetExt>.dll</TargetExt>
+    <IncludePath>$(SolutionDir)\Achievements\ARK-Server-API\version\Core\Public\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>
+      </SDLCheck>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>
+      </EnableCOMDATFolding>
+      <OptimizeReferences>
+      </OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)\Achievements\ARK-Server-API\lib;$(SolutionDir)\Achievements\ARK-Server-API\out_lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Winmm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;ArkApi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Achievements.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ARK-Server-API\include\curl\curl\curl.h" />
+    <ClInclude Include="ARK-Server-API\include\curl\curl\curlver.h" />
+    <ClInclude Include="ARK-Server-API\include\curl\curl\easy.h" />
+    <ClInclude Include="ARK-Server-API\include\curl\curl\mprintf.h" />
+    <ClInclude Include="ARK-Server-API\include\curl\curl\multi.h" />
+    <ClInclude Include="ARK-Server-API\include\curl\curl\stdcheaders.h" />
+    <ClInclude Include="ARK-Server-API\include\curl\curl\system.h" />
+    <ClInclude Include="ARK-Server-API\include\curl\curl\typecheck-gcc.h" />
+    <ClInclude Include="ARK-Server-API\include\curl\curl\urlapi.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql++11.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\big_endian.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\binary_log_types.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\byte_order_generic.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\byte_order_generic_x86.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\decimal.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\errmsg.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\keycache.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\little_endian.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\mysql.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\mysqld_ername.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\mysqld_error.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\mysql\client_authentication.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\mysql\client_plugin.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\mysql\get_password.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\mysql\mysql_lex_string.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\mysql\plugin_auth_common.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\mysql\plugin_trace.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\mysql\psi\mysql_file.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\mysql\psi\mysql_idle.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\mysql\psi\mysql_mdl.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\mysql\psi\mysql_memory.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\mysql\psi\mysql_ps.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\mysql\psi\mysql_socket.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\mysql\psi\mysql_sp.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\mysql\psi\mysql_stage.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\mysql\psi\mysql_statement.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\mysql\psi\mysql_table.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\mysql\psi\mysql_thread.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\mysql\psi\mysql_transaction.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\mysql\psi\psi.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\mysql\psi\psi_base.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\mysql\psi\psi_memory.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\mysql\service_mysql_alloc.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\mysql\service_my_snprintf.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\mysql_com.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\mysql_com_server.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\mysql_embed.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\mysql_time.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\mysql_version.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\my_alloc.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\my_byteorder.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\my_command.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\my_compiler.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\my_config.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\my_dbug.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\my_dir.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\my_getopt.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\my_global.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\my_list.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\my_sys.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\my_thread.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\my_thread_local.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\my_xml.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\m_ctype.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\m_string.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\sql_common.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\sql_state.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\sslopt-case.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\sslopt-longopts.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\sslopt-vars.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\thr_cond.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\thr_mutex.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\thr_rwlock.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\mysql\typelib.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\polyfill\datetime.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\polyfill\function_traits.h" />
+    <ClInclude Include="ARK-Server-API\include\mysql++11\polyfill\optional.hpp" />
+    <ClInclude Include="ARK-Server-API\include\sqllite\sqlite_modern_cpp.h" />
+    <ClInclude Include="ARK-Server-API\include\sqllite\sqlite_modern_cpp\errors.h" />
+    <ClInclude Include="ARK-Server-API\include\sqllite\sqlite_modern_cpp\lists\error_codes.h" />
+    <ClInclude Include="ARK-Server-API\include\sqllite\sqlite_modern_cpp\log.h" />
+    <ClInclude Include="ARK-Server-API\include\sqllite\sqlite_modern_cpp\sqlcipher.h" />
+    <ClInclude Include="ARK-Server-API\include\sqllite\sqlite_modern_cpp\utility\function_traits.h" />
+    <ClInclude Include="ARK-Server-API\include\sqllite\sqlite_modern_cpp\utility\uncaught_exceptions.h" />
+    <ClInclude Include="ARK-Server-API\include\sqllite\sqlite_modern_cpp\utility\variant.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\ARK\Actor.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\ARK\Ark.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\ARK\Enums.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\ARK\GameMode.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\ARK\GameState.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\ARK\Inventory.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\ARK\Other.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\ARK\PrimalStructure.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\ARK\Tribe.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\Base.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\Enums.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\Fields.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\BasicTypes.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Containers\Algo\BinarySearch.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Containers\Algo\Impl\BinaryHeap.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Containers\Algo\IntroSort.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Containers\Algo\Reverse.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Containers\Algo\Sort.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Containers\BitArray.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Containers\ContainerAllocationPolicies.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Containers\EnumAsByte.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Containers\FString.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Containers\Map.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Containers\ScriptArray.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Containers\Set.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Containers\SparseArray.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Containers\TArray.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Delegates\IntegerSequence.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\GenericPlatform\GenericPlatformAtomics.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\GenericPlatform\GenericPlatformMath.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\GenericPlatform\GenericPlatformMemory.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\GenericPlatform\GenericPlatformString.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\HAL\UnrealMemory.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Math\Color.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Math\ColorList.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Math\IntPoint.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Math\IntVector.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Math\Quat.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Math\Rotator.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Math\UnrealMathUtility.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Math\Vector.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Math\Vector2D.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Misc\ByteSwap.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Misc\Char.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Misc\CString.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Misc\StructBuilder.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\NetSerialization.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Templates\AlignmentTemplates.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Templates\AndOrNot.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Templates\AreTypesEqual.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Templates\ChooseClass.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Templates\Decay.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Templates\EnableIf.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Templates\Function.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Templates\HasGetTypeHash.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Templates\IdentityFunctor.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Templates\Invoke.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Templates\IsArithmetic.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Templates\IsContiguousContainer.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Templates\IsEnum.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Templates\IsEnumClass.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Templates\IsPODType.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Templates\IsPointer.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Templates\IsTriviallyCopyAssignable.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Templates\IsTriviallyCopyConstructible.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Templates\IsTriviallyDestructible.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Templates\Less.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Templates\MemoryOps.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Templates\PointerIsConvertibleFromTo.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Templates\RemoveCV.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Templates\RemoveReference.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Templates\ReversePredicate.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Templates\SharedPointer.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Templates\SharedPointerInternals.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Templates\Sorting.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Templates\Tuple.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Templates\TypeCompatibleBytes.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Templates\TypeHash.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Templates\UnrealTemplate.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Templates\UnrealTypeTraits.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\UE.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Windows\MicrosoftPlatformString.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\API\UE\Windows\WindowsPlatformAtomics.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Ark\ArkApiUtils.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Database\Mysql.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Database\Sqllite.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\IApiUtils.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\ICommands.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\IHooks.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\json.hpp" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\Logger.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\async_logger.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\common.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\details\async_logger_impl.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\details\async_log_helper.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\details\file_helper.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\details\logger_impl.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\details\log_msg.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\details\mpmc_bounded_q.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\details\null_mutex.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\details\os.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\details\pattern_formatter_impl.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\details\registry.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\details\spdlog_impl.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\fmt\bundled\container.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\fmt\bundled\format.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\fmt\bundled\ostream.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\fmt\bundled\posix.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\fmt\bundled\printf.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\fmt\bundled\string.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\fmt\bundled\time.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\fmt\fmt.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\fmt\ostr.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\formatter.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\logger.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\sinks\android_sink.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\sinks\ansicolor_sink.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\sinks\base_sink.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\sinks\dist_sink.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\sinks\file_sinks.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\sinks\msvc_sink.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\sinks\null_sink.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\sinks\ostream_sink.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\sinks\sink.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\sinks\stdout_sinks.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\sinks\syslog_sink.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\sinks\wincolor_sink.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\sinks\windebug_sink.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\spdlog.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Logger\spdlog\tweakme.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Requests.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Timer.h" />
+    <ClInclude Include="ARK-Server-API\version\Core\Public\Tools.h" />
+    <ClInclude Include="Hook_HandleNewPlayer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="ARK-Server-API\lib\libcurl.lib" />
+    <Library Include="ARK-Server-API\lib\libeay32.lib" />
+    <Library Include="ARK-Server-API\lib\libMinHook.x64.lib" />
+    <Library Include="ARK-Server-API\lib\libmysql.lib" />
+    <Library Include="ARK-Server-API\lib\mysqlclient.lib" />
+    <Library Include="ARK-Server-API\lib\ssleay32.lib" />
+    <Library Include="ARK-Server-API\out_lib\ArkApi.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
